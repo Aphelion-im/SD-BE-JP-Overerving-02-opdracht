@@ -2,8 +2,8 @@ package nl.novi.javaprogrammeren.overerving;
 
 public class Dog extends Pet {
 
-    public Dog(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String species) {
-        super(name, gender, nameOfOwner, favoriteFoodBrand, species);
+    public Dog(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String breed) {
+        super(name, gender, nameOfOwner, favoriteFoodBrand, breed);
     }
 
     @Override

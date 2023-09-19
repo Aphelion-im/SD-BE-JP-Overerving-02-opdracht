@@ -1,7 +1,5 @@
 package nl.novi.javaprogrammeren.overerving;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -9,22 +7,15 @@ public class Main {
         Dog dog1 = new Dog("Pablo", "male", "Chris", "Prince", "Garbage");
         Wolf wolf1 = new Wolf("Silas", "male", "Wolf Den", "Wednesday", "Zimbabwe", "Scott McCall");
         Cat cat1 = new Cat("Simba", "male", "Mufasa", "Brekkies", "European shorthair", true);
-        Lion lion1 = new Lion("Mufasa", "male", "Pride's rock", "Thursday", "Nigeria", 12);
-        Lion lion2 = new Lion("Simba", "male", "Pride's rock", "Thursday", "Nigeria", 12);
+        Lion lion1 = new Lion("Mufasa", "male", "Pride's rock", "Nigeria", 12);
+        Lion lion2 = new Lion("Simba", "male", "Pride's rock", "Nigeria", 12);
         Tiger tiger1 = new Tiger("Nala", "female", "Bengalese tigers", "Tuesday", "Nairobi");
 
-        ArrayList<Zoo> zooAnimals = new ArrayList<>();
-
-        zooAnimals.add(wolf1);
-        zooAnimals.add(lion1);
-        zooAnimals.add(tiger1);
-
-
-
-        System.out.println("The following animals are in the Zoo:");
-        for(Zoo name : zooAnimals) {
-        System.out.println("- " + name.getName());
-        }
+        Zoo artis = new Zoo("Artis");
+        artis.addWildAnimal(wolf1);
+        artis.addWildAnimal(lion1);
+        artis.addWildAnimal(lion2);
+        artis.addWildAnimal(tiger1);
 
         dog1.move();
         dog1.makeSound();
@@ -36,5 +27,6 @@ public class Main {
         System.out.println(lion1.getNumberOfCubs());
         System.out.println(tiger1.getNameOfPaddock());
 
+        artis.printAnimals(artis);
     }
 }

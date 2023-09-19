@@ -1,15 +1,16 @@
 package nl.novi.javaprogrammeren.overerving;
 
 public abstract class Pet extends Animal {
-    String nameOfOwner;
-    String favoriteFoodBrand;
-    String species;
+    private final String breed;
+    private String nameOfOwner;
+    private String favoriteFoodBrand;
 
-    public Pet(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String species) {
+    // Protected: An access modifier used for attributes, methods and constructors, making them accessible in the same package and subclasses. (Not in superclass!)
+    protected Pet(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String breed) {
         super(name, gender);
         this.nameOfOwner = nameOfOwner;
         this.favoriteFoodBrand = favoriteFoodBrand;
-        this.species = species;
+        this.breed = breed;
     }
 
     public String getNameOfOwner() {
@@ -21,6 +22,14 @@ public abstract class Pet extends Animal {
     }
 
     public String getSpecies() {
-        return species;
+        return breed;
+    }
+
+    public void setNameOfOwner(String nameOfOwner) {
+        this.nameOfOwner = nameOfOwner;
+    }
+
+    public void setFavoriteFoodBrand(String favoriteFoodBrand) {
+        this.favoriteFoodBrand = favoriteFoodBrand;
     }
 }

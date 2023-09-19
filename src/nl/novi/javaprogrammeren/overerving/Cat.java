@@ -3,8 +3,8 @@ package nl.novi.javaprogrammeren.overerving;
 public class Cat extends Pet {
     boolean isIndoorCat;
 
-    public Cat(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String species, boolean isIndoorCat) {
-        super(name, gender, nameOfOwner, favoriteFoodBrand, species);
+    protected Cat(String name, String gender, String nameOfOwner, String favoriteFoodBrand, String breed, boolean isIndoorCat) {
+        super(name, gender, nameOfOwner, favoriteFoodBrand, breed);
         this.isIndoorCat = isIndoorCat;
     }
 

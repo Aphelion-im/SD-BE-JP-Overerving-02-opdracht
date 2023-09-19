@@ -1,10 +1,10 @@
 package nl.novi.javaprogrammeren.overerving;
 
-public class Lion extends Zoo {
+public class Lion extends Wild {
     private final int numberOfCubs;
 
-    public Lion(String name, String gender, String nameOfPaddock, String dayLastFed, String landOfOrigin, int numberOfCubs) {
-        super(name, gender, nameOfPaddock, dayLastFed, landOfOrigin);
+    public Lion(String name, String gender, String nameOfPaddock, String landOfOrigin, int numberOfCubs) {
+        super(name, gender, nameOfPaddock, landOfOrigin);
         this.numberOfCubs = numberOfCubs;
     }
 

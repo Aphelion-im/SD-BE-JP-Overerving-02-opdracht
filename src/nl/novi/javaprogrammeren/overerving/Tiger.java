@@ -1,14 +1,18 @@
 package nl.novi.javaprogrammeren.overerving;
 
-public class Tiger extends Zoo {
-    int numberOfStripes;
+public class Tiger extends Wild {
+    private int numberOfStripes; // Niet in constructor
 
-    public Tiger(String name, String gender, String nameOfPaddock, String dayLastFed, String landOfOrigin) {
-        super(name, gender, nameOfPaddock, dayLastFed, landOfOrigin);
+    protected Tiger(String name, String gender, String nameOfPaddock, String landOfOrigin, String nairobi) {
+        super(name, gender, nameOfPaddock, landOfOrigin);
     }
 
     public int getNumberOfStripes() {
         return numberOfStripes;
+    }
+
+    public void setNumberOfStripes(int numberOfStripes) {
+        this.numberOfStripes = numberOfStripes;
     }
 
     @Override

@@ -2,45 +2,39 @@ package nl.novi.javaprogrammeren.overerving;
 
 import java.util.ArrayList;
 
-public abstract class Zoo extends Animal {
+public class Zoo {
+    private String nameOfZoo;
+    private static int numberOfAnimals;
+    ArrayList<Wild> animalsList = new ArrayList<>();
 
-    String nameOfPaddock;
-    String dayLastFed;
-    String landOfOrigin;
-
-    public Zoo(String name, String gender, String nameOfPaddock, String dayLastFed, String landOfOrigin) {
-        super(name, gender);
-        this.nameOfPaddock = nameOfPaddock;
-        this.dayLastFed = dayLastFed;
-        this.landOfOrigin = landOfOrigin;
+    public Zoo(String nameOfZoo) {
+        this.nameOfZoo = nameOfZoo;
     }
 
-ArrayList<Animal> animals = new ArrayList<>();
-
-
-    public String getNameOfPaddock() {
-        return nameOfPaddock;
+    public String getNameOfZoo() {
+        return nameOfZoo;
     }
 
-    public String getDayLastFed() {
-        return dayLastFed;
+    public void setNameOfZoo(String nameOfZoo) {
+        this.nameOfZoo = nameOfZoo;
     }
 
-    public String getLandOfOrigin() {
-        return landOfOrigin;
+    public int getNumberOfAnimals() {
+        return numberOfAnimals;
     }
 
-//    Kan addAnimal alleen in main?
-//    public static void addAnimal(Animal animal) {
-//        System.out.println("Test: " + animal);
-//    }
+    public void addWildAnimal(Wild animal) {
+        System.out.println(animal.getName() + " has been added to " + this.nameOfZoo + "!");
+        this.animalsList.add(animal);
+        numberOfAnimals++;
+    }
 
-// Lukt me niet om een print method te maken. Of kan dat alleen in main?
-//    public static void printZooAnimals(Zoo animals) {
-//        System.out.println("The following animals are in the Zoo:");
-//        for(Zoo name : animals) {
-//            System.out.println("- " + name.getName());
-//        }
-//    }
+public void printAnimals(Zoo nameOfZoo) {
+    System.out.println("Here is the list of animals in " + this.nameOfZoo + ":");
+    System.out.println("There are " + this.getNumberOfAnimals() + " animals in " + this.nameOfZoo + ":");
+    for(Wild name : animalsList) {
+        System.out.println(name.getName());
+    }
+}
 
 }
